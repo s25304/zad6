@@ -12,7 +12,7 @@ using zad6.Context;
 namespace zad6.Migrations
 {
     [DbContext(typeof(Zad6Context))]
-    [Migration("20240607210543_CreatePrescriptionMedicament")]
+    [Migration("20240607212627_CreatePrescriptionMedicament")]
     partial class CreatePrescriptionMedicament
     {
         /// <inheritdoc />

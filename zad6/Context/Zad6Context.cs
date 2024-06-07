@@ -26,4 +26,17 @@ public class Zad6Context : DbContext
     public DbSet<Prescription> Prescriptions { get; set; }
     
     public DbSet<PrescriptionMedicament> PrescriptionMedicaments { get; set; }
+
+
 }
+
+
+
+
+/*  protected override void OnModelCreating(ModelBuilder modelBuilder)
+  {
+      modelBuilder.Entity<PrescriptionMedicament>()
+          .HasKey(pm => new { pm.IdMedicament, pm.IdPrescription });
+  }
+  do recznego doprecyzowania DML
+  */
