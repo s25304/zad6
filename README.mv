@@ -1,4 +1,5 @@
                                                  *notes*
+Web api with controllers
 
 instalacja bibliotek:
 
@@ -6,7 +7,7 @@ instalacja bibliotek:
     -Microsoft.EntityFrameworkCore.Design: 8.0.4
     -Microsoft.EntityFrameworkCore.SqlServer: 8.0.4
     
-dodanie pakietu Context :
+dodanie  urla do appsettings.json :
   db url:  "Server=db-mssql.pjwstk.edu.pl;Database=s25304;Trusted_Connection=True;User id=s25304;password=xxx;"
     dodanie do appsettings.json Configuracji z urlem
 
@@ -17,7 +18,10 @@ builder.Services.AddDbContext<Zad6Context>(opt =>
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-zobacz klase Context:
+stworzenie klasy Context:
     
     public DbSet<Medicament> Medicaments { get; set; } - dodanie modelu
-    i potem komenda : dotnet ef migrations add nazwa migracji/commita
+    i potem komenda : dotnet ef migrations add nazwa_migracji/commita -stworzenie migracji
+    
+zapis do bazy migracji:
+ dotnet ef database update
